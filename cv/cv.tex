@@ -1,0 +1,256 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=1.7cm, right=1.7cm, top=1.7cm, bottom=1.7cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{charter}
+
+% --- Color Palette ---
+\definecolor{primary}{HTML}{003366}
+\definecolor{secondary}{HTML}{444444}
+\definecolor{rulecol}{HTML}{CCCCCC}
+\definecolor{RULECOL}{HTML}{CCCCCC}
+
+% --- Hyperlink Setup ---
+\hypersetup{
+    colorlinks=true,
+    urlcolor=primary,
+    linkcolor=primary
+}
+
+% --- Section Formatting ---
+\titleformat{\section}
+  {\large\bfseries\color{primary}\MakeUppercase}
+  {}
+  {0em}
+  {}
+  [\vspace{-6pt}\textcolor{rulecol}{\hrule height 0.8pt}\vspace{4pt}]
+
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+
+% --- Custom Commands ---
+\newcommand{\cventry}[4]{
+    \noindent\textbf{#1} \hfill \textit{#2} \\
+    \textit{#3} \hfill \textit{\small #4} \\
+    \vspace{-4pt}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+% === HEADER ===
+\begin{center}
+    {\Huge \textbf{Juan Pablo Arango Rentería}} \\
+    \vspace{6pt}
+    {\color{secondary} \itshape Research Analyst \quad|\quad Communication Engineer \quad|\quad Computational Neuroscience} \\
+    \vspace{6pt}
+    {\small
+    Toronto, ON \quad\textbar\quad
+    (613) 762-2123 \quad\textbar\quad
+    \href{mailto:juan.pablo.arango.renteria@gmail.com}{juan.pablo.arango.renteria@gmail.com} \\
+    \href{https://github.com/JPArangoRenteria}{github.com/JPArangoRenteria} \quad\textbar\quad
+    \href{https://linkedin.com/in/juan-pablo-arango-0380b0191}{linkedin.com/in/juan-pablo-arango-0380b0191}}
+\end{center}
+
+\vspace{8pt}
+
+% === RESEARCH INTERESTS ===
+\section{Research Interests}
+
+\begin{tabularx}{\linewidth}{@{}p{0.5\linewidth} X@{}}
+    \textbf{Computational Neuroimaging:} MEG source connectivity, Diffusion Tensor Imaging (DTI), tractography, and structural parcellation. &
+    \textbf{ML \& Clinical Translation:} Machine learning biomarkers for pain laterality, subtype characterization, and surgical outcome prediction. \\
+
+    \textbf{Mathematical Modeling:} Graph Neural Networks (GNN), Explainable AI (XAI), stochastic modeling, and statistical learning frameworks. &
+    \textbf{Digital Signal Processing:} Multi-modal sensor fusion, physiological time-series analysis, and clinical NLP for pain narratives.
+\end{tabularx}
+
+% === RESEARCH EXPERIENCE ===
+\section{Research Experience}
+
+\cventry{Hodaie Lab (PI: Dr. Mojgan Hodaie) --- University Health Network / University of Toronto}{Toronto, ON}{Research Analyst I}{Oct 2025 -- Dec 2026}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=2pt]
+    \item Spearheading computational development of the lab's \textbf{diffusion neuroimaging}, and \textbf{structural radiomics} pipelines for biomarker discovery in trigeminal neuralgia (TN) and related neuropathic pain disorders.
+
+    \item Developing \textbf{normative and predictive models} linking segment-wise diffusion microstructure features to clinical phenotypes including pain laterality and surgical outcomes.
+
+    \item Assisting in the transition from a \textbf{DataLad-based neuroimaging data management framework} to a centralized \textbf{TrueNAS storage infrastructure}, supporting scalable imaging data organization and computational workflow integration.
+
+    \item Collaborating across projects on tractography refinement, spatial parcellation architecture, and explainable AI visualization frameworks for chronic pain neuroimaging.
+\end{itemize}
+
+\vspace{6pt}
+
+\cventry{GNN-Based Wireless Network Optimization --- Jie Gao Research Group (PI: Dr. Jie Gao), Carleton University}{Ottawa, ON}{Research Collaborator}{Apr 2025 -- Present}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=2pt]
+    \item Designing algorithms combining \textbf{Graph Neural Networks (GNN)} and \textbf{Reinforcement Learning (RL)} for distributed radio resource scheduling in wireless networks.
+
+    \item Developed Python simulation frameworks evaluating RF system performance under varying network conditions and traffic loads.
+
+    \item Applied machine learning optimization techniques directly analogous to graph-based connectivity modelling used in computational neuroscience.
+\end{itemize}
+
+\vspace{6pt}
+
+\cventry{Biomedical ML Pipeline --- CUBIC Lab (PI: Dr. Rafik Goubran), Carleton University}{Ottawa, ON}{Research Collaborator}{Apr 2025 -- Present}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=2pt]
+    \item Applied machine learning methods to physiological signal datasets for automated clinical event classification downstream of DSP preprocessing pipelines.
+
+    \item Developed feature engineering and statistical evaluation workflows for multi-modal biomedical datasets.
+\end{itemize}
+
+% === SELECTED RESEARCH PROJECTS ===
+\section{Selected Research Projects (Work in Progress)}
+
+\vspace{4pt}
+\cventry{Trigeminal Neuralgia Tractometry \& Microstructural Biomarker Mapping}{Hodaie Lab}{Computational Analyst}{2025 -- Present}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=2pt]
+    \item \textbf{Tractometry Pipeline Engineering:} Automated end-to-end diffusion tractometry workflows across a 120-patient cohort, executing along-tract sampling of trigeminal nerve bundles to capture localized microstructural variations beyond global nerve averages.
+
+    \item \textbf{Along-Tract Feature Extraction:} Quantified segment-wise microstructural metrics—including \textbf{FA}, \textbf{MD}, \textbf{AD}, and \textbf{RD}—to map localized demyelination patterns, axonal integrity, and structural degradation along the nerve profile.
+
+    \item \textbf{Statistical \& Phenotypic Modeling:} Modeled high-dimensional tractometric feature profiles against clinical phenotypes, identifying significant focal along-tract alterations associated with pain laterality and disease severity.
+
+    \item \textbf{High-Dimensional Visualization:} Standardized spatial mapping of tract-profile statistics into 3D visualization environments (MRtrix3, 3D Slicer), translating quantitative tractometric arrays into intuitive pathological heatmaps for neurosurgical analysis.
+\end{itemize}
+\vspace{4pt}
+
+\cventry{Peripheral Node Parcellation \& Clinical Mapping}{Collaborator: Sarasa Tohyamaa --- Hodaie Lab}{Computational Analyst}{November 2025 -- October 2026}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=2pt]
+    \item Extending trigeminal spatial parcellation and heatmap frameworks to peripheral nerve nodes in chronic pain patients.
+
+    \item Performing morphological analyses to identify structural vulnerability patterns associated with chronification and nerve damage.
+\end{itemize}
+
+
+\vspace{4pt}
+
+\cventry{Biomedical DSP: Automated Apnea \& Hypopnea Detection}{CUBIC Lab}{ML Analyst}{Collaborators: Matthew Stewart \& Julien Larivière-Chartier}{2025 -- Present}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=2pt]
+    \item Applied machine learning classification and statistical event-scoring methods to physiological signal features for automated apnea and hypopnea detection.
+
+    \item Developed feature engineering workflows using spectral and amplitude-derived characteristics to identify respiratory desaturation events.
+\end{itemize}
+
+\vspace{4pt}
+
+\cventry{Glossopharyngeal Neuralgia (GPN): A Multimodal Analysis Case Series }{Hodaie Lab}{Collaborators: Emilio Garcia Flores, Jana Mahmoud, Annabella Helvadjian, Jason Yue(Lead)}{Computational Neuroimaging Analyst}{January 2026 -- August 2026}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=2pt]
+
+    \item \textbf{Cohort Design:} Constructed a matched-control framework using \textbf{4 healthy controls per patient} (GPN: $n=7$, HC: $n=28$) for statistically robust analysis in a rare neuropathic pain cohort.
+
+    \item \textbf{Tractography Pipeline:} Developed diffusion MRI tractography workflows to isolate the \textbf{glossopharyngeal nerve (CN IX)}, addressing anatomical challenges due to its small calibre and proximity to adjacent cranial nerves.
+
+    \item \textbf{Microstructural Analysis:} Performed segment-wise and voxel-wise analysis of diffusion metrics (FA, MD, AD, RD) to characterize structural deviations between GPN patients and controls.
+
+    \item \textbf{Framework Extension:} Generalized trigeminal radiomics pipelines to additional cranial nerve systems for broader application to rare cranial neuropathies.
+\end{itemize}
+
+\vspace{4pt}
+
+
+
+% === PUBLICATIONS & CONFERENCE CONTRIBUTIONS ===
+\section{Manuscripts}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=4pt]
+    \item Garcia Flores E, Wu M, Cabrera-Montes J, \textbf{Arango JP}, Jörgens D, Li J, Latypov TH, Stewart M, Srisaikaew P, Hodaie M. ``Ventral Tegmental Area resting state functional connectivity is altered in Trigeminal Neuralgia Patients.'' \textit{Brain}. In review.
+    \item Cheng J, Zuo K, Naraghi A, Tohyama S, \textbf{Arango JP}, Baltzer H. ``Median nerve regeneration after acute versus delayed repair: longitudinal tractography and tractometry in a case of bilateral transection.'' \textit{Muscle \& Nerve}, In review.
+\end{itemize}
+
+\section{Conference Presentations \& Abstracts}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=4pt]
+    \item Wu M, Garcia Flores E, Cabrera-Montes J, \textbf{Arango JP}, Jörgens D, Li J, Latypov TH, Stewart M, Srisaikaew P, Hodaie M. ``Ventral Tegmental Area resting state functional connectivity is altered in Trigeminal Neuralgia Patients.'' Oral presentation and abstract, World Society for Stereotactic and Functional Neurosurgery (WSSFN) Congress, Marseille, France, 2026.
+    \item Yuen J, Garcia Flores E, \textbf{Arango JP}, Mahmood J, Tohyama S, Helvadijan A, Hodaie M. ``Quantitative Multimodal MRI Characterization of Glossopharyngeal Neuralgia: An Imaging-Enriched Case Series.'' Abstract, World Society for Stereotactic and Functional Neurosurgery (WSSFN) Congress, Marseille, France, 2026.
+    \item Cabrera J, Villamil F, Jörgens D, \textbf{Arango JP}, Hodaie M. ``Trigeminal Neuralgia Tractometry: Insights from a 120-Patient Cohort.'' Presentation, World Society for Stereotactic and Functional Neurosurgery (WSSFN) Congress, Marseille, France, 2026.
+\end{itemize}
+
+% === EDUCATION ===
+\section{Education}
+
+\cventry{Carleton University}{Ottawa, ON}{B.Eng. Communication Engineering (Co-operative)}{Aug 2020 -- Jul 2025}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=2pt]
+    \item \textbf{Distinctions:} Dean's Honour List (2021), George Fierheller Scholarship (2021).
+
+    \item \textbf{Relevant Coursework:} Digital Signal Processing (A+), Introduction to Machine Learning (A-), Wireless Communications (A-), Topics in Communication Networks (A), Digital Communications (A-), Network and Software Systems (A), Signals and Systems (B+).
+
+    \item \textbf{Capstone:} LEO Satellite Network Simulator --- RF link budget modeling, OSPF routing, and ML-based performance prediction for Low Earth Orbit systems.
+\end{itemize}
+
+\vspace{6pt}
+
+\cventry{University of Waterloo}{Waterloo, ON}{B.Math. Applied Mathematics, Honours}{Aug 2016 -- Aug 2020}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=2pt]
+    \item \textbf{Distinctions:} University of Waterloo Merit Scholarship (2017).
+
+    \item \textbf{Program Focus:} Scientific computation, numerical methods, stochastic modeling, and applied mathematical analysis.
+
+    \item \textbf{Selected Coursework:} Control Theory (84\%), Computational Mathematics (88\%), Computational Linear Algebra (81\%), Partial Differential Equations I \& II, Applied Real Analysis, Sampling Theory.
+\end{itemize}
+
+% === INDUSTRY EXPERIENCE ===
+\section{Industry Experience}
+
+\cventry{Cloud RAN Systems Designer --- Ericsson Inc.}{Ottawa, ON}{Intership}{May 2023 -- Aug 2024}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=0pt]
+    \item Developed 5G RAN radio hardware/software systems involving TRX architecture, RF link budgets, Opensearch monitoring infrastructure, and CI/CD pipelines using Docker, Kubernetes, and Jenkins.
+\end{itemize}
+
+\vspace{4pt}
+
+\cventry{Embedded Software Engineer Intern --- Nokia}{Ottawa, ON}{Internship}{May 2022 -- Aug 2022}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=0pt]
+    \item Optimized C/C++ real-time communication protocols achieving 25\% latency reduction and developed network performance testing tools in Unix environments.
+\end{itemize}
+
+\vspace{4pt}
+
+\cventry{Full Stack Developer --- Neurobotx}{Ottawa, ON}{Contract}{Aug 2021 -- Dec 2021}
+
+\begin{itemize}[leftmargin=1.5em, topsep=2pt, itemsep=0pt]
+    \item Developed real-time biomedical device communication systems and REST API interfaces for data acquisition and control.
+\end{itemize}
+
+% === TECHNICAL SKILLS ===
+\section{Technical Skills}
+
+\begin{description}[style=multiline, leftmargin=3.5cm, font=\bfseries, itemsep=3pt]
+
+    \item[Neuroimaging] MNE-Python, FreeSurfer, FSL (dtifit, eddy), MRtrix3, 3D Slicer, PyRadiomics, SimpleITK, FSLEyes, MIBrain, tractography, diffusion MRI processing.
+
+ 
+    \item[Signal Processing] Spectral analysis, STFT, digital filter design (SciPy), physiological signal analysis, multi-modal sensor fusion, DSP pipelines.
+
+    \item[Programming] Python, MATLAB, R, C/C++, JavaScript, Bash/Shell, SQL, Git, Linux/Unix.
+
+    \item[Infrastructure \& DevOps] Docker, Kubernetes, Jenkins, AWS, CI/CD, Prometheus, Grafana, Opensearch, DataLad, TrueNAS.
+
+\end{description}
+
+% === LANGUAGES ===
+\section{Languages}
+
+\noindent
+\textbf{Spanish} (Native)
+\quad\textbar\quad
+\textbf{English} (Fluent)
+\quad\textbar\quad
+\textbf{French} (Conversational)
+\hfill
